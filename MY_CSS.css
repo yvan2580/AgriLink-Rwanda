@@ -263,6 +263,8 @@ div.btm::after
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    border-style: groove;
+    border-color: white;
 }
 .slider1 img:hover
 {
