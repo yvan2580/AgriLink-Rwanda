@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | AgriLink Rwanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- ================= BACK TO TOP ================= -->
+    <button id="topBtn" title="Go to top">
+        ↑
+    </button>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    AgriLink Rwanda
+                </a>
+            </div>
+            <button class="menu-toggle">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html" class="active">
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <div class="profile">
+                <img src="../images/profiles/user.jpg" class="profile-picture" alt="Profile" onerror="this.src='../images/profiles/Profile_avatar.png';">
+                <a href="login.html">
+                    Login
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+            <section class="register-section">
+                <div class="register-container">
+                    <h1>Seller Registration</h1>
+                    <p>Create your seller account to sell fresh agricultural products to buyers across Rwanda.</p>
+                    <form id="RegistrationForm">
+                        <h2>Personal Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" required>First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" required>Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <h2>Contact Information</h2>
+                        <div class="form-row"> 
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+250 7xx xxx xxx" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <h2>Your Location / Farm Location</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Province"> Province </label>
+                                <select id="province" required>
+                                    <option value="" selected disabled>Select Province</option>
+                                    <option>Kigali City</option>
+                                    <option>Northern</option>
+                                    <option>Southern</option>
+                                    <option>Western</option>
+                                    <option>Eastern</option>
+                                </select>
+                                <label for="district"> District </label>
+                                <select id="district" disabled required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
+                                <label for="sector"> Sector </label>
+                                <select id="sector" disabled required>
+                                    <option value="" selected disabled>Select Sector</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h2>Account Security</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">I agree to the Terms and Conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Create Account</button>
+                    </form>
+                </div>
+            </section>
+    </main> 
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>AgriLink Rwanda</h3>
+                <p>Connecting farmers and buyers through technology.</p>
+                </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: info@agrilink.rw</p>
+                <p>Phone: +250 788 000 000</p>
+                <p>Kigali, Rwanda</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 AgriLink Rwanda. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
