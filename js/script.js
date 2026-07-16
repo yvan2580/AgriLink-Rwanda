@@ -369,7 +369,7 @@ const products = [
 
         rating: 4.5,
 
-        image: "../images/products/cooking-banana/cooking-banana1.jpg"
+        image: "../images/products/cooking-banana/cooking-banana3.jpg"
 
     },
 
