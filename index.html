@@ -1,332 +1,275 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Farm-to-Table Market</title>
-
-    <link rel="stylesheet" href="MY_CSS.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body>
-
-    <!-- TOP BAR -->
-    <div class="top n">
-
-        <div class="left">
-            <h1>Farm-to-Table Market</h1>
-        </div>
-
-        <div class="right">
-
-            <img src="user_pic" onerror="this.src='Profile_avatar.png'" style="width:90px;height:90px;border-radius:50%;">
-
-            <p class="ar">
-                <a href=""><b>User Name</b></a>
-                <a href="#" id="logout-btn"><b>Log Out</b></a>
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!--STATUS BAR-->
-<div class="status">
-
-    <a href="index.html" class="status nav-link">
-        HOME
-    </a>
-
-    <a href="product_page1.html" class="status nav-link">
-        PRODUCTS
-    </a>
-
-    <a href="" class="status nav-link">
-        SELLERS
-    </a>
-
-    <a href="" class="status nav-link">
-        ORDERS
-    </a>
-
-    <a href="" class="status nav-link">
-        HELP
-    </a>
-
-</div>
-
-
-    <!-- SEARCH -->
-    <div class="search">
-        <input type="text" placeholder="Search products, farmers or districts">
-        <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AgriLink Rwanda | Connecting Farmers and Buyers</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- ================= BACK TO TOP ================= -->
+        <button id="topBtn" title="Go to top">
+            ↑
         </button>
-    </div>
-
-
-    <!-- MAIN BODY -->
-    <div class="btm">
-        <!-- HERO SECTION -->
-        <div class="hero">
-            <h1>Fresh Crops Directly From Farmers</h1>
-            <p>
-                We connect local farmers with buyers across the country
-                using affordable transportation and trusted delivery.
-            </p>
-            <a href="product_page1.html">
-                <button class="shop-btn">
-                    Shop Products
+        <!-- ================= HEADER ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                    AgriLink Rwanda
+                    </a>
+                </div>
+                <button class="menu-toggle">
+                    ☰
                 </button>
-            </a>
-
-        </div>
-
-
-        <!-- QUICK STATS -->
-        <div class="stats">
-
-            <div class="stat-card">
-                <i class="fa-solid fa-tractor"></i>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input
+                    type="text"
+                    placeholder="Search products, sellers or districts">
+                </div>
+                <div class="register-dropdown">
+                    <button class="register-btn">
+                    Register ▼
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="pages/register-buyer.html">
+                        Register as Buyer
+                        </a>
+                        <a href="pages/register-seller.html">
+                        Register as Seller
+                        </a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="user1profile.jpg" alt="profile_pic" class="profile-picture" onerror="this.src='images/profiles/Profile_avatar.png'; this.onerror=null;">
+                    </div>
+                    <a href="pages/login.html">
+                        Login
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>
+                        Connecting Rwanda's Farmers to Every Buyer
+                    </h1>
+                    <p>
+                        Buy fresh agricultural products directly from trusted farmers across Rwanda.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pages/products.html" class="btn">
+                            Browse Products
+                        </a>
+                        <a href="pages/register-seller.html" class="btn btn-secondary">
+                            Become a Seller
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= ADVANCED SEARCH ================= -->
+        <section class="advanced-search">
+            <h2>
+                Find What You Need
+            </h2>
+            <form>
+                <input type="text" placeholder="Product name">
+                <select>
+                    <option>Category</option>
+                    <option>Cereals</option>
+                    <option>Vegetables</option>
+                    <option>Fruits</option>
+                    <option>Tubers</option>
+                </select>
+                <select>
+                    <option>District</option>
+                    <option>Huye</option>
+                    <option>Musanze</option>
+                    <option>Rubavu</option>
+                    <option>Kigali</option>
+                </select>
+                <select>
+                    <option>Search By</option>
+                    <option>Product</option>
+                    <option>Seller</option>
+                    <option>District</option>
+                </select>
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+        </section>
+        <!-- ================= PRODUCT CATEGORIES ================= -->
+        <section class="categories">
+            <h2>Product Categories</h2>
+            <div class="category-container">
+                <div class="category-card">
+                    <img src="images/products/beans/beans1.jpg" alt="Beans">
+                    <h3>Beans</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/products/maize/maize1.jpg" alt="Maize">
+                    <h3>Maize</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/products/potatoes/potatoes1.jpg" alt="Potatoes">
+                    <h3>Irish Potatoes</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/products/sweet-potatoes/sweet-potatoes2.jpg" alt="Sweet Potatoes">
+                    <h3>Sweet Potatoes</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/products/cassava/cassava1.jpg" alt="Cassava">
+                    <h3>Cassava</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/products/cooking-banana/cooking-banana2.jpg" alt="Cooking Bananas">
+                    <h3>Cooking Bananas</h3>
+                </div>
+            </div>
+        </section>
+        <!-- ================= FEATURED PRODUCTS ================= -->
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="images/products/beans/beans1.jpg" alt="Beans">
+                    <div class="product-info">
+                        <h3>Beans</h3>
+                        <p class="price">RWF 850 / Kg</p>
+                        <p class="location">📍 Huye</p>
+                        <p class="seller">Seller: Green Farm</p>
+                        <a href="pages/product.html" class="btn">
+                        View Details
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/maize/maize1.jpg" alt="Maize">
+                    <div class="product-info">
+                        <h3>Maize</h3>
+                        <p class="price">RWF 700 / Kg</p>
+                        <p class="location">📍 Musanze</p>
+                        <p class="seller">Seller: Sunrise Farm</p>
+                        <a href="pages/product.html" class="btn">
+                        View Details
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/potatoes/potatoes1.jpg" alt="Potatoes">
+                    <div class="product-info">
+                        <h3>Irish Potatoes</h3>
+                        <p class="price">RWF 500 / Kg</p>
+                        <p class="location">📍 Rubavu</p>
+                        <p class="seller">Seller: Kivu Farm</p>
+                        <a href="pages/product.html" class="btn">
+                        View Details
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/cooking-banana/cooking-banana3.jpg" alt="Cooking Bananas">
+                    <div class="product-info">
+                        <h3>Cooking Bananas</h3>
+                        <p class="price">RWF 450 / Kg</p>
+                        <p class="location">📍 Kigali</p>
+                        <p class="seller">Seller: Agri Fresh</p>
+                        <a href="pages/product.html" class="btn">
+                        View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= STATISTICS ================= -->
+        <section class="statistics">
+            <div class="stat-box">
                 <h2>500+</h2>
-                <p>Farmers</p>
+                <p>Registered Farmers</p>
             </div>
-
-            <div class="stat-card">
-                <i class="fa-solid fa-basket-shopping"></i>
-                <h2>1200+</h2>
-                <p>Products</p>
+            <div class="stat-box">
+                <h2>2000+</h2>
+                <p>Products Listed</p>
             </div>
-
-            <div class="stat-card">
-                <i class="fa-solid fa-truck"></i>
-                <h2>All Districts</h2>
-                <p>Delivery Coverage</p>
+            <div class="stat-box">
+                <h2>30</h2>
+                <p>Districts Served</p>
             </div>
-
-        </div>
-
-
-        <!-- CATEGORIES -->
-        <h2 class="title">Popular Categories</h2>
-
-        <div class="categories">
-
-            <a href="product_page.html" class="cat">
-
-                <img src="cassava1.jpg"
-                onerror="this.src='product_img_holder.png'">
-
-                <h3>Cassava</h3>
-
-            </a>
-
-            <a href="product_page.html" class="cat">
-
-                <img src="potatos1.jpg"
-                onerror="this.src='product_img_holder.png'">
-
-                <h3>Potatoes</h3>
-
-            </a>
-
-            <a href="product_page.html" class="cat">
-
-                <img src="c_bananas1.jpg"
-                onerror="this.src='product_img_holder.png'">
-
-                <h3>Cooking Bananas</h3>
-
-            </a>
-
-            <a href="product_page.html" class="cat">
-
-                <img src="s_potatos4.jpg"
-                onerror="this.src='product_img_holder.png'">
-
-                <h3>Sweet Potatos</h3>
-
-            </a>
-
-        </div>
-
-
-        <!-- WHY CHOOSE US -->
-        <h2 class="title">Why Choose Us?</h2>
-
-        <div class="why">
-
-            <div class="why-card">
-
-                <i class="fa-solid fa-seedling"></i>
-
-                <h3>Fresh Products</h3>
-
-                <p>
-                    Products come directly from local farms
-                    without middlemen.
-                </p>
-
+            <div class="stat-box">
+                <h2>100%</h2>
+                <p>Fresh Products</p>
             </div>
-
-            <div class="why-card">
-
-                <i class="fa-solid fa-money-bill-wave"></i>
-
-                <h3>Low Transport Fees</h3>
-
-                <p>
-                    Affordable transportation to all corners
-                    of the country.
-                </p>
-
+        </section>
+        <!-- ================= WHY CHOOSE US ================= -->
+        <section class="why-us">
+            <h2>Why Choose AgriLink Rwanda?</h2>
+            <div class="why-container">
+                <div class="why-card">
+                    <h3>🌱 Fresh Products</h3>
+                    <p>Buy directly from trusted farmers.</p>
+                </div>
+                <div class="why-card">
+                    <h3>💰 Fair Prices</h3>
+                    <p>Farmers and buyers negotiate transparent prices.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🚜 Trusted Farmers</h3>
+                    <p>Verified sellers increase confidence.</p>
+                </div>
+                <div class="why-card">
+                    <h3>📍 Nationwide Access</h3>
+                    <p>Find products from districts across Rwanda.</p>
+                </div>
             </div>
-
-            <div class="why-card">
-
-                <i class="fa-solid fa-shield"></i>
-
-                <h3>Trusted Farmers</h3>
-
-                <p>
-                    Verified sellers with quality and
-                    reliable delivery.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FEATURED PRODUCTS -->
-        <h2 class="title">Featured Products</h2>
-
-        <div class="featured">
-
-            <div class="product-card">
-
-                <img src="Potatoes6.jpg">
-
-                <h3>Fresh Potatoes</h3>
-
-                <p>From Musanze</p>
-
-                <button>View</button>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="cassava1.jpg">
-
-                <h3>Cassava</h3>
-
-                <p>From Huye</p>
-
-                <button>View</button>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="c_bananas5.jpg">
-
-                <h3>Cooking Bananas</h3>
-
-                <p>From Rubavu</p>
-
-                <button>View</button>
-
-            </div>
-
-        </div>
-
-
-        <!-- TESTIMONIALS -->
-        <h2 class="title">What Buyers Say</h2>
-
-        <div class="testimonials">
-
-            <div class="test-card">
-                <p>
-                    "Products arrived fresh and transport
-                    cost was very affordable."
-                </p>
-
-                <h4>- Jean Claude</h4>
-            </div>
-
-            <div class="test-card">
-                <p>
-                    "Very helpful platform for connecting
-                    farmers and clients."
-                </p>
-
-                <h4>- Diane</h4>
-            </div>
-
-        </div>
-
-
-        <!-- FOOTER -->
+        </section>
+        <!-- ================= JOIN COMMUNITY ================= -->
+        <section class="join-community">
+            <h2>Join Our Community</h2>
+            <p>Become part of Rwanda's growing digital agriculture marketplace.</p>
+            <div class="join-buttons">
+                <a href="pages/register-buyer.html" class="btn">Register as Buyer</a>
+                <a href="pages/register-seller.html" class="btn btn-secondary">Register as Seller</a>
+                </div>
+        </section>
+        <!-- ================= FOOTER ================= -->
         <footer>
-
-            <p>
-                © 2026 Farm-to-Table Market
-            </p>
-
-            <p>
-                Connecting Local Farmers With Buyers Across Rwanda
-            </p>
-
+            <div class="footer-container">
+                <div>
+                    <h3>AgriLink Rwanda</h3>
+                    <p>Connecting farmers and buyers through technology.</p>
+                    </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>Email: info@agrilink.rw</p>
+                    <p>Phone: +250 788 000 000</p>
+                    <p>Kigali, Rwanda</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 AgriLink Rwanda. All Rights Reserved.</p>
+            </div>
         </footer>
-
-    </div>
-    <script>
-        const navLinks =
-        document.querySelectorAll(".nav-link");
-        const currentPage1 =
-        window.location.pathname.split("/").pop();
-        navLinks.forEach((link) =>
-        {
-            const href =
-            link.getAttribute("href");
-            // HOME PAGE
-            if(
-                href === "index.html"  &&  currentPage1 === "index.html"
-            )
-            {
-                link.classList.add("active-status");
-            }
-            // ALL PRODUCT PAGES
-            if(
-                href === "product_page1.html"  &&   currentPage1.startsWith("product_page")
-            )
-            {
-                link.classList.add("active-status");
-            }
-
-        });
-
-        const logoutBtn =
-        document.getElementById("logout-btn");
-        logoutBtn.addEventListener("click", (event) =>
-        {
-            // STOP DEFAULT LINK ACTION
-            event.preventDefault();
-            // CONFIRM MESSAGE
-            const answer =
-            confirm("Are you sure you want to log out?");
-            // IF YES
-            if(answer)
-            {
-                window.location.href =
-                "Welcome_page.html";
-            }
-        });
-
-    </script>
-</body>
+        <script src="js/script.js"></script>
+    </body>
 </html>
