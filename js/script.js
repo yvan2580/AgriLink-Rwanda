@@ -960,10 +960,10 @@ if(sellerName)
     REGISTRATION PAGE
 ==========================================*/
 const currentPage1 = window.location.pathname.split("/").pop();
-if(currentPage1 === "register-buyer.html"){
-    const buyerRegisterForm = document.getElementById("buyerRegisterForm");
-    if(buyerRegisterForm){
-        buyerRegisterForm.addEventListener("submit", function(event){
+if(currentPage1 === "register-buyer.html" || currentPage1 === "register-seller.html"){
+    const RegisterForm = document.getElementById("RegisterForm");
+    if(RegisterForm){
+        RegisterForm.addEventListener("submit", function(event){
             event.preventDefault();
             const password = document.getElementById("Password").value;
             const confirmPassword = document.getElementById("ConfirmPassword").value;
@@ -984,7 +984,7 @@ if(currentPage1 === "register-buyer.html"){
                 return;
             }
             alert("Buyer account created successfully!");
-            buyerRegisterForm.reset();
+            RegisterForm.reset();
         });
     }
     const location = {
