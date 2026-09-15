@@ -1,10 +1,10 @@
-# 🌾 AgriLink Rwanda
+# AgriLink Rwanda
 
 AgriLink Rwanda is a web-based agricultural marketplace that connects farmers and buyers across Rwanda. The platform enables sellers to showcase agricultural products while allowing buyers to discover, compare, and purchase products from trusted sellers.
 
 ---
 
-## 📌 Features
+## Features
 
 ### Buyer
 - Register and log in
@@ -33,7 +33,7 @@ AgriLink Rwanda is a web-based agricultural marketplace that connects farmers an
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -44,7 +44,7 @@ AgriLink Rwanda is a web-based agricultural marketplace that connects farmers an
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├───AgriLink Rwanda
@@ -212,7 +212,7 @@ AgriLink Rwanda is a web-based agricultural marketplace that connects farmers an
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Shopping cart
 - Buy Now functionality
@@ -225,12 +225,12 @@ AgriLink Rwanda is a web-based agricultural marketplace that connects farmers an
 
 ---
 
-## 👨💻 Developer
+## Developer
 
 Developed as an academic project to promote digital agriculture and improve the connection between farmers and buyers in Rwanda.
 
 ---
 
-## 📄 License
+## License
 
 This project is for educational purposes.
