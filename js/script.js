@@ -369,7 +369,7 @@ const products = [
 
         rating: 4.5,
 
-        image: "../images/products/cooking-banana/cooking-banana3.jpg"
+        image: "../images/products/cooking-banana/cooking-banana1.jpg"
 
     },
 
@@ -961,38 +961,121 @@ if(sellerName)
 ==========================================*/
 const currentPage1 = window.location.pathname.split("/").pop();
 if(currentPage1 === "register-buyer.html" || currentPage1 === "register-seller.html"){
-    const RegisterForm = document.getElementById("RegisterForm");
+    const RegisterForm = document.getElementById("RegistrationForm");
     if(RegisterForm){
-        RegisterForm.addEventListener("submit", function(event){
-            event.preventDefault();
-            const password = document.getElementById("Password").value;
-            const confirmPassword = document.getElementById("ConfirmPassword").value;
-            const email = document.getElementById("email");
-            const emailPattern = /^[\s@]+@[^\s]+\.[^\s@]+$/;
-            const phone = document.getElementById("phone");
-            if(!emailPattern.test(email)){
-                alert("Please enter a valid email address.");
-                return;
+        const firstname = document.getElementById("firstName");
+        const lastname = document.getElementById("lastName");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const email = document.getElementById("email");
+        const emailPattern = /^[\s@]+@[^\s]+\.[^\s@]+$/;
+        const phone = document.getElementById("phone");
+        const phonePattern = /^(\+250|0)7[2389][0-9]{7}$/;
+        const agree = document.getElementById("agree");
+        const submit = document.getElementById("submit");
+        firstname.addEventListener("blur", function()
+        {
+            if(firstname.value.length <= 2)
+            {
+                document.getElementById("fnameAlertText").textContent = "Please enter valid name.";
+                firstname.classList.add("alertbox");
             }
-            if(password.length < 8){
-                alert("Password must contain at least 8 characters.");
-                return;
+            else
+            {
+                document.getElementById("fnameAlertText").textContent = "";
+                firstname.classList.remove("alertbox");
             }
-            
-            if(password !== confirmPassword){
-                alert("Passwords do not match.");
-                return;
+        });
+        lastname.addEventListener("blur", function()
+        {
+            if(lastname.value.length <= 2)
+            {
+                document.getElementById("lnameAlertText").textContent = "Please enter valid name.";
+                lastname.classList.add("alertbox");
             }
+            else
+            {
+                document.getElementById("lnameAlertText").textContent = "";
+                lastname.classList.remove("alertbox");
+            }
+        });
+        email.addEventListener("blur", function()
+        {
+            if(!emailPattern.test(email.value))
+            {
+                document.getElementById("emailAlertText").textContent = "Please enter a valid email address.";
+                email.classList.add("alertbox");
+            }
+            else
+            {
+                document.getElementById("emailAlertText").textContent = "";
+                email.classList.remove("alertbox");
+            }
+        });
+        phone.addEventListener("blur", function()
+        {
+            if(!phonePattern.test(phone.value))
+            {
+                document.getElementById("phoneAlertText").textContent = "Please enter a valid Rwandan number.";
+                phone.classList.add("alertbox");
+            }
+            else
+            {
+                document.getElementById("phoneAlertText").textContent = "";
+                phone.classList.remove("alertbox");
+            }
+        });
+        password.addEventListener("blur", function()
+        {
+            if(password.value.length < 8)
+            {
+                document.getElementById("passwordAlertText").textContent = "Password must contain at least 8 characters.";
+                password.classList.add("alertbox");
+            }
+            else
+            {
+                document.getElementById("passwordAlertText").textContent = "";
+                password.classList.remove("alertbox");
+            }
+        });
+        confirmPassword.addEventListener("blur", function()
+        {
+            if(password.value !== confirmPassword.value)
+            {
+                document.getElementById("confirmAlertText").textContent = "Enter the same password.";
+                confirmPassword.classList.add("alertbox");
+            }
+            else
+            {
+                document.getElementById("confirmAlertText").textContent = "";
+                confirmPassword.classList.remove("alertbox");
+            }
+        });
+        agree.addEventListener("change", function()
+        {
+            if(agree.checked)
+            {
+                submit.disabled = false;
+            }
+            else
+            {
+                submit.disabled = true;
+            }
+        })
+        RegisterForm.addEventListener("submit", function(value)
+        {
+            value.preventDefault();
             alert("Buyer account created successfully!");
             RegisterForm.reset();
-        });
+        });    
     }
     const location = {
-        "Kigali":{
+        "Kigali City":{
             "Gasabo":[
                 "Bumbogo",
                 "Gatsata",
                 "Jabana",
+                "Jali",
                 "Kacyiru",
                 "Kimuhurura",
                 "Kimironko",
@@ -1064,4 +1147,91 @@ if(currentPage1 === "register-buyer.html" || currentPage1 === "register-seller.h
             "Rutsiro":[]
         }
     }
-};
+    
+    const province = document.getElementById("province");
+    const district = document.getElementById("district");
+    const sector = document.getElementById("sector");
+    
+    province.addEventListener("change", function()
+    {
+        district.disabled = false;
+        district.innerHTML = '<option value="" selected disabled>Select District</option>';
+        Object.keys(location[province.value]).forEach(function(item)
+        {
+            const option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+            district.appendChild(option);
+        });
+    });
+
+    district.addEventListener("change", function()
+    {
+        sector.disabled = false;
+        sector.innerHTML = '<option value="" selected disabled>Select Sector</option>';
+        location[province.value][district.value].forEach(function(item)
+        {
+            const option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+            sector.appendChild(option);
+        });
+    });
+}
+if(currentPage1 === "contact.html"){
+    const contactform = document.getElementById("contactForm");
+    const fullname = document.getElementById("fullName");
+    const subject = document.getElementById("subject");
+    const emailaddress = document.getElementById("emailAddress");
+    const message = document.getElementById("message");
+
+    fullname.addEventListener("blur", function()
+    {
+        if(fullname.value.length < 6)
+        {
+            document.getElementById("msubmit").disabled = true;
+            document.getElementById("fullNameError").textContent = "Too short full names.";
+            fullname.classList.add("alertbox");
+        }
+        else
+        {
+            document.getElementById("fullNameError").textContent = "";
+            fullname.classList.remove("alertbox");
+            subject.addEventListener("blur", function()
+            {
+                if(subject.value.length < 5)
+                {
+                    document.getElementById("msubmit").disabled = true;
+                    document.getElementById("subjectError").textContent = "Too short subject text.";
+                    subject.classList.add("alertbox");
+                }
+                else
+                {
+                    document.getElementById("subjectError").textContent = "";
+                    subject.classList.remove("alertbox");
+                    message.addEventListener("change", function()
+                    {
+                        if(message.value.length < 20)
+                        {
+                            document.getElementById("msubmit").disabled = true;
+                            document.getElementById("messageError").textContent = "Too short message.";
+                            message.classList.add("alertbox");
+                        }
+                        else
+                        {
+                            document.getElementById("messageError").textContent = "";
+                            message.classList.remove("alertbox");
+                            document.getElementById("msubmit").disabled = false;
+                            contactform.addEventListener("submit", function(value)
+                            {
+                                value.preventDefault();
+                                alert("Message sent successfully!");
+                                contactform.reset();
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    });                           
+}
