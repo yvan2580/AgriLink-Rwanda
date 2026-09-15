@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products | AgriLink Rwanda</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!-- ================= BACK TO TOP ================= -->
+        <button id="topBtn" title="Go to top">
+            ↑
+        </button>
+        <!-- ================= HEADER ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../index.html">
+                        AgriLink Rwanda
+                    </a>
+                </div>
+                <button class="menu-toggle">
+                    ☰
+                </button>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="active">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-box">
+                    <input type="text"
+                        id="searchInput"
+                        placeholder="Search products...">
+                </div>
+                <div class="register-dropdown">
+                    <button class="register-btn">
+                        Register ▼
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="register-buyer.html">
+                            Register as Buyer
+                        </a>
+                        <a href="register-seller.html">
+                            Register as Seller
+                        </a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="../images/profiles/user.jpg"
+                        class="profile-picture"
+                        alt="Profile"
+                        onerror="this.src='../images/profiles/Profile_avatar.png'; this.onerror=null;">
+                    <a href="login.html">
+                        Login
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section class="contact-hero">
+            <div class="hero-overlay">
+               <div class="container">
+                    <h1>Contact Us</h1>
+                    <p>
+                        We'd love to hear from you. Reach out with your questions,
+                        feedback, or partnership inquiries.
+                    </p>
+                </div> 
+            </div>
+            
+        </section>
+        <section class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-item">
+                        <h3>📍 Address</h3>
+                        <p>Kigali, Rwanda</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p>+250 7XX XXX XXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>info@agrilink.rw</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕒 Working Hours</h3>
+                        <p>Monday - Friday</p>
+                        <p>8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Full Name" id="fullName" required>
+                        <P id="fullNameError" class="alertmessage"></P>
+                        <input type="email" placeholder="Email Address" id="emailAddress" required>
+                        <p id="emailAddressError" class="alertmessage"></p>
+                        <input type="text" placeholder="Subject" id="subject" required>
+                        <p id="subjectError" class="alertmessage"></p>
+                        <textarea rows="6" placeholder="Write your message..." id="message" required ></textarea>
+                        <p id="messageError" class="alertmessage"></p>
+                        <button type="submit" class="btn" id="msubmit" disabled>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>        
+        <!-- ================= FOOTER ================= -->
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>
+                        AgriLink Rwanda
+                    </h3>
+                    <p>
+                        Connecting farmers and buyers across Rwanda through technology.
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        Quick Links
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>
+                        Contact Us
+                    </h3>
+                    <p>
+                        Email: info@agrilink.rw
+                    </p>
+                    <p>
+                        Phone: +250 788 000 000
+                    </p>
+                    <p>
+                        Kigali, Rwanda
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    © 2026 AgriLink Rwanda. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
