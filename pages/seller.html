@@ -53,44 +53,81 @@
         </nav>
     </header>
     <main>
-        <section class="seller-profile">
-            <div class="seller-header">
-                <img src="../images/profiles/default-profile.png" alt="Seller Profile" id="sellerImage" onerror="this.src='../images/profiles/default-profile.png';">
-                <div class="seller-details">
-                    <h1 id="sellerName">
-                    </h1>
-                    <p id="sellerRating">
-                    </p>
-                    <p id="sellerLocation">
-                    </p>
-                    <p id="sellerJoined">
-                    </p>
+            <section class="register-section">
+                <div class="register-container">
+                    <h1>Seller Registration</h1>
+                    <p>Create your seller account to sell fresh agricultural products to buyers across Rwanda.</p>
+                    <form id="RegistrationForm">
+                        <h2>Personal Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" required>First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <p id="fnameAlertText" class="alertmessage"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" required>Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <p id="lnameAlertText" class="alertmessage"></p>
+                            </div>
+                        </div>
+                        <h2>Contact Information</h2>
+                        <div class="form-row"> 
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+250 7xx xxx xxx" required>
+                                <p id="phoneAlertText" class="alertmessage"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="you@example.com" required>
+                                <p id="emailAlertText" class="alertmessage"></p>
+                            </div>
+                        </div>
+                        <h2>Your Location / Farm Location</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Province"> Province </label>
+                                <select id="province" required>
+                                    <option value="" selected disabled>Select Province</option>
+                                    <option>Kigali City</option>
+                                    <option>Northern Province</option>
+                                    <option>Southern Province</option>
+                                    <option>Western Province</option>
+                                    <option>Eastern Province</option>
+                                </select>
+                                <label for="district"> District </label>
+                                <select id="district" disabled required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
+                                <label for="sector"> Sector </label>
+                                <select id="sector" disabled required>
+                                    <option value="" selected disabled>Select Sector</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h2>Account Security</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+                                <p id="passwordAlertText" class="alertmessage"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" required>
+                                <p id="confirmAlertText" class="alertmessage"></p>
+                            </div>
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">I agree to the Terms and Conditions</label>
+                        </div>
+                        <button type="submit" class="btn" id="submit" disabled>Create Account</button>
+                    </form>
                 </div>
-            </div>
-        </section>
-        <section class="seller-about">
-            <h2>
-                About Seller
-            </h2>
-            <p id="sellerDescription">
-            </p>
-        </section>
-        <section class="seller-products">
-            <h2>
-                Products From This Seller
-            </h2>
-            <div class="carousel-container">
-                    <button class="carousel-btn prev" id="sellerPagePrev">
-                        &#10094;
-                    </button>
-                <div class="carousel" id="sellerProducts">
-                </div>
-                <button class="carousel-btn next" id="sellerPageNext">
-                    &#10095;
-                </button>
-            </div>
-        </section>
-    </main>
+            </section>
+    </main> 
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-container">
@@ -101,10 +138,10 @@
             <div>
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/products.html">Products</a></li>
-                    <li><a href="pages/about.html">About</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
