@@ -63,10 +63,12 @@
                             <div class="form-group">
                                 <label for="firstName" required>First Name</label>
                                 <input type="text" id="firstName" name="firstName" required>
+                                <p id="fnameAlertText" class="alertmessage"></p>
                             </div>
                             <div class="form-group">
                                 <label for="lastName" required>Last Name</label>
                                 <input type="text" id="lastName" name="lastName" required>
+                                <p id="lnameAlertText" class="alertmessage"></p>
                             </div>
                         </div>
                         <h2>Contact Information</h2>
@@ -74,10 +76,12 @@
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" placeholder="+250 7xx xxx xxx" required>
+                                <p id="phoneAlertText" class="alertmessage"></p>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
                                 <input type="email" id="email" placeholder="you@example.com" required>
+                                <p id="emailAlertText" class="alertmessage"></p>
                             </div>
                         </div>
                         <h2>Your Location / Farm Location</h2>
@@ -87,10 +91,10 @@
                                 <select id="province" required>
                                     <option value="" selected disabled>Select Province</option>
                                     <option>Kigali City</option>
-                                    <option>Northern</option>
-                                    <option>Southern</option>
-                                    <option>Western</option>
-                                    <option>Eastern</option>
+                                    <option>Northern Province</option>
+                                    <option>Southern Province</option>
+                                    <option>Western Province</option>
+                                    <option>Eastern Province</option>
                                 </select>
                                 <label for="district"> District </label>
                                 <select id="district" disabled required>
@@ -107,17 +111,19 @@
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" id="password" required>
+                                <p id="passwordAlertText" class="alertmessage"></p>
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password</label>
                                 <input type="password" id="confirmPassword" required>
+                                <p id="confirmAlertText" class="alertmessage"></p>
                             </div>
                         </div>
                         <div class="terms">
                             <input type="checkbox" id="agree" required>
                             <label for="agree">I agree to the Terms and Conditions</label>
                         </div>
-                        <button type="submit" class="btn">Create Account</button>
+                        <button type="submit" class="btn" id="submit" disabled>Create Account</button>
                     </form>
                 </div>
             </section>
